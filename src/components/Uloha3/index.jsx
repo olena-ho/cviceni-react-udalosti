@@ -1,7 +1,7 @@
-import kvetinaUrl from './kvetina.svg';
-import listUrl from './list.svg';
-import slunceUrl from './slunce.svg';
-import vlockaUrl from './vlocka.svg';
+import kvetinaUrl from "./kvetina.svg";
+import listUrl from "./list.svg";
+import slunceUrl from "./slunce.svg";
+import vlockaUrl from "./vlocka.svg";
 
 /*
 Zadání: Doplňte komponentu tak, aby každé tlačítko po kliknutí vypsalo, jakou volbu uživatel
@@ -9,12 +9,17 @@ Zadání: Doplňte komponentu tak, aby každé tlačítko po kliknutí vypsalo, 
 */
 
 export const Uloha3 = () => {
+  
+  const logChoice = (season) => {
+    console.log(`Uživatel zvolil ${season}`)
+  };
+
   return (
     <>
       Které roční období je ve střední Evropě nejteplejší?
       <ol>
         <li>
-          <button>
+          <button onClick={() => logChoice('jaro')}>
             <img src={kvetinaUrl} width={16} height={16} alt="květina" />
             jaro (březen až květen)
           </button>
