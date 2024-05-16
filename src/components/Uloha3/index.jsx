@@ -13,7 +13,13 @@ export const Uloha3 = () => {
   const logChoice = (season) => {
     console.log(`Uživatel zvolil ${season}`)
   };
+{/*can also be done through
+const logChoice = (e) => {
+    console.log(`Uživatel zvolil ${e.target.innerText}`)
+  };
+   <button onClick={logChoice}>
 
+*/} 
   return (
     <>
       Které roční období je ve střední Evropě nejteplejší?
