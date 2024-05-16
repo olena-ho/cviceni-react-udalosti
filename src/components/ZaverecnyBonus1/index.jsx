@@ -6,9 +6,16 @@ Zadání: Předstírejme, že na stránce je složitý formulář, do kterého u
 */
 
 export const ZaverecnyBonus1 = () => {
+  const askConfirmation = (e) => {
+    const confirmLink = confirm('chce opravdu odejít a tím ztratit rozpracovanou práci?');
+    if (confirmLink === false) {
+      e.preventDefault();
+    }
+  }
+
   return (
     <>
-      Odkaz: <a href="https://www.czechitas.cz/">www.czechitas.cz</a>
+      Odkaz: <a href="https://www.czechitas.cz/" onClick={askConfirmation}>www.czechitas.cz</a>
       <hr />
       Formulář:
       <form>
